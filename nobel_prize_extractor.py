@@ -69,7 +69,7 @@ def nobel_api_laureates():
         result_list.append(extract_records(laureate))
     return result_list
 
-
-# Extract Data & Create Basic Data Frames
-df_nobel = pd.DataFrame(nobel_api_laureates())
-df_nobel.to_csv("./data.csv")
+if __name__ == "__main__":
+    # Extract Data & Create Basic Data Frames
+    df_nobel = pd.DataFrame(nobel_api_laureates())
+    df_nobel.to_csv("./data.csv")
